@@ -2,6 +2,8 @@
 
 A domain-specific Question-Answering assistant built on top of the original **Valmiki Ramayana** using Retrieval-Augmented Generation (RAG).
 
+🔗 **Live Demo:** [Ramayana AI Streamlit App](https://rag-based-ramayana-chatbot-hjnnp8xsdfcsarjvjl9kc8.streamlit.app/)
+
 Standard LLMs often struggle with ancient texts—they tend to mix up regional retellings, TV adaptations, or simply make up chapter citations. This project addresses that problem by grounding answers in the complete English translation of the Valmiki Ramayana (Gita Press edition), providing source references (Kanda, Canto, and Page number) for factual claims.
 
 ---
