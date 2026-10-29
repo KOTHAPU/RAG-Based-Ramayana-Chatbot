@@ -118,9 +118,10 @@ ramayana-rag-chatbot/
 
 ## Installation (Windows PowerShell)
 
-### 1. Clone / open the project
+### 1. Clone the repository
 ```powershell
-cd d:\RAG-Ramayana
+git clone https://github.com/KOTHAPU/RAG-Based-Ramayana-Chatbot.git
+cd RAG-Based-Ramayana-Chatbot
 ```
 
 ### 2. Create a virtual environment
@@ -132,7 +133,7 @@ python -m venv venv
 ```powershell
 .\venv\Scripts\Activate.ps1
 ```
-> If you get an execution policy error, run:  
+> If you encounter an execution policy error on Windows, run:  
 > `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`
 
 ### 4. Install dependencies
@@ -143,22 +144,20 @@ pip install -r requirements.txt
 ### 5. Configure environment variables
 ```powershell
 Copy-Item .env.example .env
-notepad .env
 ```
 
-Fill in your Groq API key:
+Add your Groq API key in `.env`:
 ```
 GROQ_API_KEY=gsk_your_key_here
 ```
 
 ---
 
-## Configuring Groq (Recommended)
+## Configuring Groq
 
-1. Go to [console.groq.com](https://console.groq.com) and sign up (free).
-2. Create an API key.
-3. Add it to your `.env` file as shown above.
-4. The default model is `llama-3.3-70b-versatile`.
+1. Create a free API key at [console.groq.com](https://console.groq.com).
+2. Add it to your `.env` file (`GROQ_API_KEY=gsk_...`).
+3. The recommended default model is `qwen/qwen3.8-27b`.
 
 ---
 
