@@ -1,0 +1,221 @@
+# Ramayana RAG Demo Dataset
+# Source: Valmiki Ramayana, translated by Ralph T.H. Griffith (1870-1874)
+# This is a public domain work. Original Sanskrit by Sage Valmiki.
+# Attribution: Griffith, Ralph T. H. (translator). "The Ramayana of Valmiki." 
+#              Benares: E.J. Lazarus and Co., 1870-1874.
+# Source URL: https://sacred-texts.com/hin/rama/index.htm
+# License: Public Domain (translation pre-dates 1928)
+#
+# NOTE: This is a curated sample of selected passages for demonstration purposes.
+# It does NOT represent the complete Ramayana. Add full Kanda texts for comprehensive coverage.
+
+## BALA KANDA (Book of Youth)
+
+### The Birth of Rama
+
+In Ayodhya, the ancient city of the Ikshvaku dynasty, there ruled a mighty king named Dasharatha. He was righteous, powerful, and beloved by his people. King Dasharatha had three queens: Kaushalya, the eldest and most honoured; Kaikeyi, beautiful and strong-willed; and Sumitra, gentle and wise.
+
+For many years, Dasharatha had no children, and this grieved him deeply. At the counsel of his ministers and the sage Vasishtha, he performed the Putrakameshti yajna, the sacred fire sacrifice for obtaining sons. The divine fire god Agni appeared bearing a golden vessel of sacred payasam, the divine nectar. Dasharatha offered the payasam to his queens.
+
+Queen Kaushalya received the first and largest share, and from her was born Rama, the eldest prince, who shone with celestial beauty and virtue. Queen Kaikeyi received a share next, and bore Bharata, a prince of noble disposition. Queen Sumitra received two portions and bore the twins Lakshmana and Shatrughna.
+
+Of the four princes, Rama was the most virtuous, the most devoted to dharma, and the most beloved by the people of Ayodhya. From childhood, Rama showed exceptional qualities — strength, wisdom, compassion, and an unwavering commitment to righteousness.
+
+### The Princes' Education
+
+The four princes grew under the guidance of the royal preceptor Vasishtha and other sages. They mastered the Vedas, the arts of war, statecraft, and the principles of dharma. Of all the princes, Rama and Lakshmana were inseparable — Lakshmana was devoted to Rama as a second self, ever willing to serve and protect his elder brother.
+
+When the sage Vishwamitra came to King Dasharatha's court requesting that Rama accompany him to protect the sacred forest hermitages from the demon Maricha and other rakshasas, Dasharatha was reluctant to send his beloved son. But the sage Vasishtha counselled the king that this was Rama's divine calling, and so Rama and Lakshmana accompanied Vishwamitra into the forest.
+
+During their time with Vishwamitra, Rama and Lakshmana received divine weapons and learned powerful mantras. Rama slew Tataka the demoness who terrorised the hermitage. Rama also restored the sage Ahalya, who had been cursed to stone, by the touch of his foot — a demonstration of his divine nature.
+
+### The Swayamvara of Sita
+
+The sage Vishwamitra then took Rama and Lakshmana to the kingdom of Mithila, ruled by King Janaka. King Janaka had organised a swayamvara, a ceremony where a princess chooses her husband, for his daughter Sita.
+
+Sita was no ordinary princess. She had been found as an infant in a furrow of a ploughed field when King Janaka was performing a sacred ritual — she was earth-born, a daughter of the earth goddess Bhumi Devi, and she was considered exceptionally auspicious and pure.
+
+The condition for winning Sita's hand was extraordinary: the suitor must lift and string the great bow of Lord Shiva, a weapon so massive that ordinary men could not even move it. Kings and princes from across the land had come to try and failed.
+
+Rama approached the bow with calm confidence. With ease that astonished all assembled, Rama not only lifted the great bow but strung it so powerfully that it broke with a sound like thunder that shook the very earth. In this moment, Rama won the hand of Sita.
+
+The marriage of Rama and Sita was celebrated with great joy. Rama's brothers also married: Bharata married Mandavi, Lakshmana married Urmila, and Shatrughna married Shrutakirti — all daughters of the royal houses of Mithila.
+
+## AYODHYA KANDA (Book of Ayodhya)
+
+### The Coronation Plans and Kaikeyi's Boons
+
+When Rama and Sita returned to Ayodhya, the people celebrated their arrival with great joy. King Dasharatha, seeing his beloved eldest son beloved by all, decided it was time to crown Rama as the heir apparent. The city of Ayodhya was decorated, and preparations began for the grand coronation.
+
+However, Manthara, the scheming maidservant of Queen Kaikeyi, poisoned the queen's mind against Rama's coronation. Manthara argued that if Rama became king, Kaikeyi's son Bharata would be reduced to a subordinate position. Kaikeyi, manipulated by Manthara, resolved to use two boons that King Dasharatha had granted her long ago, during a great battle where she had saved the king's life.
+
+Kaikeyi confronted Dasharatha in the sulking chamber and demanded her two boons: first, that Bharata be crowned king of Ayodhya; second, that Rama be exiled to the Dandaka forest for fourteen years.
+
+Dasharatha was shattered. He begged Kaikeyi to relent, but she was adamant. Bound by his word and the sacred duty of a Kshatriya to honour his promises, Dasharatha could not refuse. He wept bitterly through the night.
+
+### Rama's Acceptance of Exile
+
+When Rama was informed of the situation, his reaction astonished everyone. Without bitterness or complaint, Rama accepted the exile with perfect equanimity. He explained that a son's duty is to fulfil his father's word, that dharma demanded he honour this decision, and that the welfare of Ayodhya depended on the king's word being kept.
+
+Sita refused to remain in the palace while her husband went to the forest. Despite Rama's attempts to dissuade her, saying the forest was dangerous and full of hardships, Sita insisted that a wife's place is with her husband. She declared that without Rama, the palace would be like a forest, and the forest with Rama would be like a palace.
+
+Lakshmana, equally devoted, also refused to remain. He argued that Rama's cause was just, that the exile was unjust, and that his dharma as a younger brother was to serve and protect Rama. He joined them willingly.
+
+Thus Rama, Sita, and Lakshmana left Ayodhya, wearing the bark garments of forest dwellers. The people of the city wept as they departed. The sight of the royal family leaving on foot was heartbreaking. King Dasharatha could not bear it. He died shortly after, of grief, crying Rama's name.
+
+### Bharata's Refusal
+
+When Bharata, who had been away in his maternal grandfather's kingdom, returned to Ayodhya and learned what had happened, he was devastated and furious with his mother Kaikeyi. He refused the throne and set out to find Rama in the forest to beg him to return.
+
+At Chitrakoot, Bharata met Rama. He pleaded with Rama to return, saying the kingdom rightfully belonged to him and that Dasharatha's dying wish was for Rama's return. But Rama refused, explaining that a son's supreme duty was to honour his father's word, even in death. He persuaded Bharata to return and rule Ayodhya.
+
+Bharata, honouring Rama's wish, returned to Ayodhya but refused to sit on the throne himself. He placed Rama's sandals on the throne as a symbol that Rama was the true king, and he ruled Ayodhya only as Rama's regent until his brother's return.
+
+## ARANYA KANDA (Book of the Forest)
+
+### Life in Exile
+
+Rama, Sita, and Lakshmana lived in the great Dandaka forest, moving from hermitage to hermitage, helping the sages who were troubled by rakshasas. Rama's reputation as a protector grew throughout the forest.
+
+At Panchavati on the banks of the Godavari river, they built a pleasant hermitage. Here they lived simply but happily, close to nature, receiving the blessings of the forest sages.
+
+### Surpanakha and Her Brothers
+
+Near Panchavati, a demoness named Surpanakha, sister of the powerful demon king Ravana of Lanka, encountered Rama and was captivated by his beauty. She proposed marriage to him. Rama, faithful to Sita, declined and redirected her to Lakshmana. When Surpanakha threatened Sita out of jealousy, Lakshmana acted to protect Sita and injured Surpanakha severely.
+
+Surpanakha fled to her brothers Khara and Dushana, who commanded a great army of rakshasas. Khara led fourteen thousand rakshasas against Rama. In a single-handed battle of extraordinary ferocity, Rama slew all of them, including Khara and Dushana.
+
+Surpanakha then went to Lanka and described Sita's beauty to Ravana, inflaming his desire. She also told Ravana of the humiliation she had suffered, urging him to take revenge. Ravana decided to abduct Sita.
+
+### The Abduction of Sita
+
+Ravana enlisted Maricha, a powerful rakshasa who could transform himself into a golden deer. The golden deer appeared near the hermitage, and Sita, enchanted by its beauty, begged Rama to capture it for her. Rama went in pursuit, suspecting it was a demon but unwilling to disappoint Sita.
+
+As he ran far from the hermitage, the demon Maricha cried out in Rama's voice, "Help, Sita! Help, Lakshmana!" Sita, hearing what she believed was Rama's cry of distress, begged Lakshmana to go to his brother's aid. Though Lakshmana was uncertain and suspicious, Sita's distress compelled him to leave, drawing a protective circle around the hermitage with his arrow.
+
+Ravana, disguised as an ascetic mendicant, approached Sita and asked her to step beyond the protective boundary to offer him alms. When Sita stepped outside, Ravana revealed himself, seized her, and flew away in his aerial chariot to Lanka.
+
+The great vulture Jatayu, an old friend of King Dasharatha, witnessed the abduction and fought heroically to save Sita. Though Jatayu was powerful and fought courageously, Ravana severed his wings, mortally wounding the noble bird. Jatayu fell to the ground.
+
+When Rama and Lakshmana returned to find Sita gone, Rama was overcome with grief and anguish. They found the dying Jatayu, who told them what had happened and the direction in which Ravana had flown. The great bird died in Rama's arms, honoured as he had honoured Rama's father.
+
+## KISHKINDHA KANDA (Book of Kishkindha)
+
+### Rama Meets Hanuman and the Vanaras
+
+Searching for Sita, Rama and Lakshmana came to the Rishyamuka mountain, where the exiled vanara (monkey) prince Sugriva lived with his followers. Hanuman, the noble and mighty son of the wind god Vayu and the vanara woman Anjana, approached Rama and Lakshmana as a Brahmin to inquire their purpose.
+
+Hanuman's first meeting with Rama is celebrated as one of the most significant moments in the epic. Rama was immediately drawn to Hanuman's wisdom, courage, and nobility. Rama said to Lakshmana that he could see in Hanuman all the qualities of the ideal servant — intelligence, eloquence, courage, and devotion.
+
+Hanuman brought Rama and Sugriva together. Sugriva had lost his kingdom and his wife Ruma to his elder brother Vali, who had wrongfully banished him. Rama and Sugriva formed an alliance: Rama would help Sugriva reclaim his kingdom, and Sugriva would help Rama find Sita.
+
+### The Death of Vali
+
+Rama slew Vali in battle, an act that has been debated by scholars and devotees across centuries. From behind a tree, Rama shot Vali with his arrow while Sugriva fought him. Vali challenged this as unfair combat, but Rama justified it on the grounds that Vali had wrongfully usurped Sugriva's wife and kingdom, violating dharma, and that a hunter may strike game even from a distance.
+
+Vali died with dignity, accepting Rama's explanation and commending his son Angada and his wife Tara to Sugriva's care. He blessed the union and acknowledged Rama's righteousness.
+
+With Vali slain, Sugriva was restored to his throne. He gathered the great vanara army to search for Sita in all four directions.
+
+## SUNDARA KANDA (Book of Beauty)
+
+### Hanuman's Leap to Lanka
+
+When the search parties reported that Sita had been taken to Lanka, the island fortress of Ravana across the great southern ocean, the vanaras were dismayed. The ocean was vast and impassable to most. But the aged and wise vanara Jambavan remembered that Hanuman possessed extraordinary powers — powers that Hanuman himself had forgotten due to a childhood curse.
+
+Jambavan reminded Hanuman of his divine birth and his extraordinary abilities. As the son of Vayu, the wind god, and the fruit of great austerities, Hanuman had the power to fly, to change his size at will, and to move as swiftly as thought. With his memory of his powers restored, Hanuman's confidence swelled.
+
+Hanuman climbed to the peak of the Mahendra mountain, compressed his body, and then with a mighty roar that shook the earth, he leapt across the ocean toward Lanka. His leap was so powerful that it created waves in the ocean, flattened forests on the shore, and left a trail of light in the sky.
+
+During his flight, Hanuman overcame several obstacles: the mountain Mainaka rose from the sea to offer him rest, which Hanuman courteously acknowledged but declined; the demoness Surasa tested him by demanding to swallow him, and Hanuman outsmarted her; the shadow-demon Simhika tried to drag him down, but Hanuman killed her.
+
+### The Search for Sita in Lanka
+
+Landing in Lanka, Hanuman marvelled at the splendour of Ravana's capital — a city of gold and jewels, with magnificent palaces and gardens. But this beauty was built on adharma and the suffering of others.
+
+Shrinking to a small size, Hanuman searched Lanka by night, entering the palace buildings, the royal halls, and the women's quarters. He saw Ravana himself sleeping in his magnificent chambers, surrounded by beautiful women, and observed the glory and the arrogance of the demon king.
+
+He did not find Sita in the palace. Despairing, he searched further and came to the Ashoka grove, a beautiful garden within the palace complex. There, beneath an Ashoka tree, sitting sorrowfully on the ground surrounded by demoness guards, Hanuman found Sita.
+
+Sita was thin from grief and fasting. She wore a single soiled garment. She was pure in character and unbroken in spirit, but deeply sorrowful. Ravana came to the grove and attempted to persuade Sita to accept him as her husband, threatening her if she refused. Sita rejected him with calm dignity, saying that she was Rama's wife and would accept no other, and that Ravana's doom was certain.
+
+### Hanuman Reveals Himself
+
+After Ravana left, Hanuman descended from the tree and spoke to Sita softly, first recounting Rama's story to establish his identity. Sita was suspicious at first — she feared this might be Ravana in another disguise, as he had come to her before disguised as an ascetic. But Hanuman produced Rama's ring and recounted details that only someone who had truly met Rama could know. Sita was overcome with joy.
+
+Hanuman offered to carry Sita back to Rama on his back, but Sita refused. She said it would not be proper for her to be touched by or to depend on any man other than Rama; it was for Rama to come to Lanka, defeat Ravana in battle, and rescue her himself — for that would restore her honour fully and punish Ravana justly.
+
+Sita gave Hanuman her crest jewel as a token for Rama, and Hanuman received it with reverence.
+
+### The Burning of Lanka
+
+Before leaving, Hanuman decided to assess Lanka's defences and perhaps draw out the demons. He allowed himself to be captured by the rakshasa forces. Brought before Ravana, Hanuman boldly delivered Rama's message: return Sita, or face destruction. Ravana, furious, ordered Hanuman's tail to be set on fire.
+
+But Hanuman, by divine grace and his own power, was unharmed by the flames. He broke free and, with his burning tail, set fire to the buildings of Lanka, leaping from rooftop to rooftop, burning the golden city. The fires lit the night sky and caused chaos throughout Lanka. Only the Ashoka grove, where Sita resided, was untouched.
+
+Hanuman then extinguished his tail in the ocean, resumed his original form, and leapt back across the sea to bring the joyful news of Sita's whereabouts to Rama.
+
+## YUDDHA KANDA (Book of War)
+
+### The Construction of the Bridge
+
+Rama and the vanara army arrived at the southern seashore and looked out across the vast ocean to Lanka. The challenge was immense — how to cross the ocean with an army?
+
+Rama propitiated the ocean god Samudra, and when Samudra appeared before him, advised Rama that the vanara Nala, son of the divine architect Vishvakarma, had the skill to build a bridge. Nala designed and supervised the construction of Rama Setu, the great bridge across the ocean to Lanka, one of the most celebrated engineering feats in the epic.
+
+The vanaras worked tirelessly, gathering rocks and trees, carrying them to the shore and casting them into the ocean. Where ordinary materials would have sunk, rocks inscribed with Rama's name floated miraculously. In five days, the bridge was complete — a causeway sixty miles wide and one hundred miles long, stretching from the Indian shore to Lanka.
+
+### Vibhishana's Defection
+
+Vibhishana, the younger brother of Ravana, was a righteous rakshasa who honoured dharma and the gods. He repeatedly counselled Ravana to return Sita and avoid war with Rama, predicting that Ravana's adharma would lead to Lanka's destruction. Ravana dismissed his counsel and humiliated him.
+
+Vibhishana, unwilling to support Ravana's injustice, left Lanka with four of his ministers and surrendered to Rama. Some of Rama's advisors were suspicious, fearing this was a spy or a trick. But Rama, ever generous and trusting, accepted Vibhishana without conditions. He declared that he would give shelter to anyone who sought his protection. Rama declared that Vibhishana would be the king of Lanka after Ravana's defeat.
+
+Vibhishana's knowledge of Lanka's defences, Ravana's powers and weaknesses, and the secrets of the rakshasa army proved invaluable to Rama in the war.
+
+### The Great War
+
+The war between Rama's vanara army and Ravana's demon forces was immense, lasting many days. Great heroes fell on both sides. Ravana's son Indrajit, also known as Meghnad, was the most formidable enemy. He used celestial weapons and was nearly invincible, killing many vanaras and temporarily incapacitating Rama and Lakshmana with the Nagapasha, the serpent-weapon.
+
+Hanuman performed another extraordinary feat — flying to the Himalayas to bring back the Sanjeevani herbs to revive the fallen warriors, including Lakshmana who had been struck down by a powerful weapon of Indrajit.
+
+Eventually, the great rakshasa generals were slain one by one. Lakshmana slew Indrajit after a fierce battle. Rama himself engaged Ravana in final combat.
+
+### The Defeat of Ravana
+
+The battle between Rama and Ravana was the climax of the epic. Ravana was a formidable warrior — he had ten heads, twenty arms, and centuries of accumulated power from his austerities. Each time Rama cut off one of Ravana's heads, it grew back.
+
+The sage Agastya appeared on the battlefield and revealed to Rama the Aditya Hridayam, the hymn to the Sun, and also told him the secret of Ravana's mortality — his life force resided in his navel, where a pot of amrita, the divine nectar of immortality, was stored.
+
+Armed with this knowledge and the powerful Brahmastra given to him by the sage Agastya, Rama aimed his final arrow at Ravana's navel. The arrow found its mark. Ravana fell, and the long war was ended.
+
+## UTTARA KANDA (Epilogue)
+
+### Sita's Return and Agni Pariksha
+
+After Ravana's defeat, Hanuman brought Sita from Lanka to Rama. But Rama, in what has been one of the most debated episodes of the epic, asked Sita to prove her purity — since she had lived in Ravana's power for so long, the world would question her honour.
+
+Sita, deeply wounded by this demand, declared that fire itself would bear witness to her purity. She entered a funeral pyre, and Agni, the fire god, refused to burn her. He emerged from the fire bearing Sita in his arms, declaring her to be of absolute purity. The gods, sages, and all assembled bore witness to her innocence.
+
+### Return to Ayodhya
+
+Fourteen years of exile had ended. Rama, Sita, and Lakshmana returned to Ayodhya in the divine Pushpaka Vimana, the celestial aerial chariot. The city was illuminated, and the people celebrated with enormous joy. Bharata, who had kept the throne as regent for Rama, restored the kingdom to his elder brother.
+
+Rama was crowned king of Ayodhya — the beginning of Rama Rajya, the reign of Rama, which became the ideal of righteous governance in Indian tradition. In this golden age, it is said that no one was unhappy, no injustice went unredressed, and dharma prevailed throughout the kingdom.
+
+### Hanuman's Devotion
+
+Hanuman's devotion to Rama and Sita is regarded as the supreme example of bhakti, devotional love, in the Hindu tradition. Hanuman asked for no reward for his service except the opportunity to continue serving Rama. He is said to live on, an immortal, wherever Rama's name is chanted or Rama's story is told.
+
+Hanuman represents the union of strength and devotion, intellect and humility, courage and selflessness. He is worshipped throughout India as a divine protector and the ideal devotee.
+
+## ON THE TRADITIONS OF THE RAMAYANA
+
+The Ramayana exists in many forms across South and Southeast Asia. The most ancient version is attributed to the sage Valmiki and consists of approximately 24,000 verses in Sanskrit, divided into seven Kandas (books). However, there are many important regional versions:
+
+- **Kamba Ramayana** (Tamil, 12th century): By the poet Kamban, highly valued in Tamil literature.
+- **Ramcharitmanas** (Hindi/Awadhi, 16th century): By the poet-saint Tulsidas, enormously influential in North India.
+- **Krittibas Ramayana** (Bengali, 15th century): By Krittibas Ojha.
+- **Adhyatma Ramayana**: A Sanskrit text emphasising Rama's divinity, embedded in the Brahmanda Purana.
+
+Each tradition may tell episodes differently, emphasise different themes, and include unique episodes. This chatbot's answers reflect the indexed documents; different editions may yield different perspectives on the same events.

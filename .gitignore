@@ -1,0 +1,43 @@
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Virtual Environments ──────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+.env
+
+# ── IDE ───────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Streamlit ─────────────────────────────────────────────────────────────────
+.streamlit/secrets.toml
+
+# ── Data & Vector Store ───────────────────────────────────────────────────────
+# Uncomment the next line to also ignore the vectorstore (it can be rebuilt)
+# vectorstore/chroma/
+
+# Large source documents (users supply these themselves)
+data/documents/*.pdf
+data/documents/*.epub
+
+# ── Logs & Temp ───────────────────────────────────────────────────────────────
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# ── HuggingFace Cache ─────────────────────────────────────────────────────────
+.cache/
+test_chroma/
