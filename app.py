@@ -419,6 +419,7 @@ def init_session_state() -> None:
         "llm_model": settings.effective_llm_model,
         "use_streaming": True,
         "example_clicked": "",
+        "custom_api_key": "",
     }
     for key, val in defaults.items():
         if key not in st.session_state:
@@ -426,6 +427,20 @@ def init_session_state() -> None:
 
 
 init_session_state()
+
+
+def get_effective_api_key() -> str:
+    """Get Groq API key from session state, os.environ, st.secrets, or settings."""
+    if st.session_state.get("custom_api_key"):
+        return st.session_state["custom_api_key"].strip()
+    if os.environ.get("GROQ_API_KEY"):
+        return os.environ["GROQ_API_KEY"].strip()
+    try:
+        if hasattr(st, "secrets") and "GROQ_API_KEY" in st.secrets:
+            return str(st.secrets["GROQ_API_KEY"]).strip()
+    except Exception:
+        pass
+    return settings.groq_api_key.strip()
 
 
 # ── Pipeline loader ───────────────────────────────────────────────────────────
@@ -436,15 +451,13 @@ def load_pipeline(provider: str, model: str, api_key: str):
     from src.rag_pipeline import RAGPipeline
     from src.config import Settings
 
-    # Build a fresh settings object with the provided values
     import os
     os.environ["LLM_PROVIDER"] = provider
     os.environ["LLM_MODEL"] = model
     if api_key:
         os.environ["GROQ_API_KEY"] = api_key
 
-    # Re-create settings after env changes
-    cfg = Settings()
+    cfg = Settings(llm_model=model, groq_api_key=api_key)
     return RAGPipeline.from_settings(cfg)
 
 
@@ -455,7 +468,7 @@ def get_pipeline():
 
     provider = st.session_state.llm_provider
     model = st.session_state.llm_model
-    api_key = settings.groq_api_key  # From .env
+    api_key = get_effective_api_key()
 
     try:
         with st.spinner("🪔 Initialising Ramayana AI…"):
@@ -553,12 +566,25 @@ def render_sidebar() -> None:
             st.session_state.llm_model = model
             st.session_state.pipeline = None
 
-        # API key status (never show the key itself)
+        # API key status & direct input
         if provider == "groq":
-            if settings.has_groq_key:
-                st.success("✓ GROQ_API_KEY loaded from .env", icon="🔑")
+            api_key = get_effective_api_key()
+            if api_key:
+                st.success("✓ GROQ_API_KEY active", icon="🔑")
             else:
-                st.error("⚠ GROQ_API_KEY not set. Add it to your .env file.", icon="🔑")
+                st.warning("🔑 GROQ_API_KEY required", icon="⚠")
+                custom_key = st.text_input(
+                    "Enter Groq API Key",
+                    type="password",
+                    placeholder="gsk_...",
+                    key="direct_api_key_input",
+                    help="Paste your Groq API key here to activate the chatbot immediately.",
+                )
+                if custom_key and custom_key.strip():
+                    st.session_state["custom_api_key"] = custom_key.strip()
+                    os.environ["GROQ_API_KEY"] = custom_key.strip()
+                    st.session_state.pipeline = None
+                    st.rerun()
 
         st.markdown("---")
 
@@ -814,13 +840,13 @@ def main() -> None:
         st.stop()
 
     # API key warning
-    if settings.llm_provider == "groq" and not settings.has_groq_key:
+    effective_api_key = get_effective_api_key()
+    if settings.llm_provider == "groq" and not effective_api_key:
         st.markdown(
             """
             <div class="error-box">
             🔑 <strong>Groq API Key Required</strong><br>
-            Add your Groq API key to a <code>.env</code> file in the project root:<br>
-            <code>GROQ_API_KEY=your_key_here</code><br>
+            Please enter your Groq API key in the sidebar, or configure it in Streamlit Secrets / <code>.env</code> file.<br>
             Get a free key at <a href="https://console.groq.com" style="color:#FF9933;">console.groq.com</a>
             </div>
             """,
@@ -901,10 +927,11 @@ def _process_question(question: str, pipeline) -> None:
         })
         return
 
-    if not settings.has_groq_key and settings.llm_provider == "groq":
+    effective_api_key = get_effective_api_key()
+    if not effective_api_key and settings.llm_provider == "groq":
         answer = (
             "A Groq API key is required to generate answers. "
-            "Please add `GROQ_API_KEY=your_key` to your `.env` file and restart the app."
+            "Please enter your Groq API key in the sidebar, or configure it in Streamlit Secrets."
         )
         st.session_state.messages.append({
             "role": "assistant",
