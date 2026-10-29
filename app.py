@@ -22,6 +22,15 @@ sys.path.insert(0, str(Path(__file__).parent))
 import streamlit as st
 from streamlit.delta_generator import DeltaGenerator
 
+# Sync Streamlit Community Cloud secrets into os.environ
+try:
+    if hasattr(st, "secrets"):
+        for k, v in st.secrets.items():
+            if isinstance(v, (str, int, float, bool)) and k not in os.environ:
+                os.environ[k] = str(v)
+except Exception:
+    pass
+
 from src.config import settings
 from src.utils import setup_logging
 

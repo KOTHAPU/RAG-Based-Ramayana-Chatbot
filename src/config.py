@@ -21,8 +21,16 @@ load_dotenv(PROJECT_ROOT / ".env")
 
 
 def _env(key: str, default: str = "") -> str:
-    """Return stripped env var or default."""
-    return os.environ.get(key, default).strip()
+    """Return stripped env var, st.secrets, or default."""
+    val = os.environ.get(key)
+    if val is None or not val.strip():
+        try:
+            import streamlit as st
+            if hasattr(st, "secrets") and key in st.secrets:
+                val = str(st.secrets[key])
+        except Exception:
+            pass
+    return (val or default).strip()
 
 
 def _env_int(key: str, default: int) -> int:
