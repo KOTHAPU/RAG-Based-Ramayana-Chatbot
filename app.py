@@ -12,6 +12,7 @@ A professional, Ramayana-themed RAG chatbot with:
 from __future__ import annotations
 
 import logging
+import os
 import sys
 import time
 from pathlib import Path
