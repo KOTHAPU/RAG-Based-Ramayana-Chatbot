@@ -126,12 +126,30 @@ def try_count_tokens(text: str) -> int:
 def format_source_label(metadata: dict[str, Any]) -> str:
     """Build a human-readable source label from chunk metadata."""
     parts: list[str] = []
-    if source := metadata.get("source_filename"):
+
+    # Use edition if available (Gita Press PDF), else fall back to filename
+    if edition := metadata.get("edition"):
+        parts.append(edition)
+    elif source := metadata.get("source_filename"):
         parts.append(source)
-    if chapter := metadata.get("chapter"):
+
+    # Kanda (book) info — from Gita Press PDF metadata
+    if kanda := metadata.get("kanda"):
+        if kanda != "Unknown":
+            parts.append(kanda)
+
+    # Canto info
+    if canto := metadata.get("canto"):
+        parts.append(canto)
+
+    # Generic chapter (for Markdown/TXT sources)
+    if not metadata.get("kanda") and (chapter := metadata.get("chapter")):
         parts.append(f"Ch. {chapter}")
+
+    # Page number
     if page := metadata.get("page_number"):
         parts.append(f"p. {page}")
+
     if not parts:
         return metadata.get("chunk_id", "Unknown source")
     return " · ".join(parts)

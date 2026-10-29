@@ -1,7 +1,16 @@
 # 🪔 Ramayana AI — Ask the Epic
 
-> **A complete, end-to-end Retrieval-Augmented Generation (RAG) chatbot grounded in indexed Ramayana texts.**  
-> Answers are not invented — they are retrieved from your document collection and generated with full source citations.
+> **A complete, end-to-end Retrieval-Augmented Generation (RAG) chatbot grounded in the complete Valmiki Ramayana (Gita Press, Gorakhpur — English translation).**  
+> Answers are not invented — they are retrieved from the indexed scripture and generated with full Kanda/Canto source citations.
+
+---
+
+## What's New ✨
+
+- **Full Valmiki Ramayana indexed** — All 7 Kandas (2,303 pages, Gita Press English edition) are embedded and searchable.
+- **Kanda & Canto metadata** — Every retrieved chunk is tagged with its Kanda (book), Canto number, and page, giving rich citations like *"Sundarakanda (Book 5) · Canto XII · p. 1205"*.
+- **Sanskrit page filtering** — Pages that are ≥ 60 % Devanagari are automatically skipped; only English translation text is indexed for clean retrieval.
+- **Grounded system prompt** — The LLM is explicitly told it has the complete 7-Kanda Valmiki Ramayana and should cite by Kanda/Canto.
 
 ---
 
@@ -34,9 +43,9 @@ flowchart TD
 
 Unlike a plain chatbot that relies purely on the LLM's pretrained memory, this application:
 
-1. **Indexes your documents** — Ramayana texts are split into overlapping chunks, embedded using a local sentence-transformer model, and stored in a persistent ChromaDB vector database.
+1. **Indexes your documents** — The Valmiki Ramayana PDF is split into overlapping chunks, embedded using a local sentence-transformer model, and stored in a persistent ChromaDB vector database.
 2. **Retrieves relevant passages** — Your question is embedded and compared against all indexed chunks. The most semantically similar passages are retrieved.
-3. **Constructs grounded context** — Retrieved passages (not the whole book) are assembled with source labels and passed to the LLM.
+3. **Constructs grounded context** — Retrieved passages (not the whole book) are assembled with Kanda/Canto source labels and passed to the LLM.
 4. **Generates a cited answer** — The LLM is explicitly instructed to use only the retrieved evidence, cite sources, and acknowledge when evidence is insufficient.
 5. **Validates citations** — The system cross-checks every `[Source N]` citation against the actual retrieved chunks to prevent hallucinated references.
 
@@ -52,9 +61,25 @@ Unlike a plain chatbot that relies purely on the LLM's pretrained memory, this a
 | Vector Store | ChromaDB (persistent local) |
 | LLM | Groq API (`qwen/qwen3.8-27b`) |
 | Alt LLM | Ollama (local) |
-| Document Loaders | pypdf, built-in |
+| Document Loaders | pypdf (with Kanda/Canto metadata extraction) |
 | Configuration | python-dotenv |
 | Testing | pytest |
+
+---
+
+## Knowledge Base — The Seven Kandas
+
+The chatbot is powered by the **complete Valmiki Ramayana** (Gita Press, Gorakhpur — English translation):
+
+| # | Kanda | Content |
+|---|-------|---------|
+| 1 | **Balakanda** | Birth and childhood of Rama; Vishwamitra's hermitage; Sita Swayamvara |
+| 2 | **Ayodhyakanda** | Life in Ayodhya; Kaikeyi's boons; 14-year exile of Rama |
+| 3 | **Aranyakanda** | Forest exile; Surpanakha; abduction of Sita by Ravana |
+| 4 | **Kishkindhakanda** | Alliance with Sugriva; killing of Vali; Vanara search parties |
+| 5 | **Sundarakanda** | Hanuman's leap to Lanka; discovery of Sita; burning of Lanka |
+| 6 | **Yuddhakanda** | Construction of Rama Setu; war with Ravana; Rama's victory |
+| 7 | **Uttarakanda** | Rama's reign; Sita's exile; Lava and Kusha; epilogue |
 
 ---
 
@@ -72,25 +97,26 @@ ramayana-rag-chatbot/
 ├── data/
 │   ├── README.md             ← Source doc guidance & attribution
 │   └── documents/
-│       └── demo_ramayana.txt ← Public-domain demo corpus (Griffith 1870)
+│       └── demo_ramayana.txt ← Public-domain fallback corpus (Griffith 1870)
+│       [Place your Valmiki Ramayana PDF here — not committed to git]
 │
 ├── vectorstore/
-│   └── chroma/               ← Persistent ChromaDB (auto-created)
+│   └── chroma/               ← Persistent ChromaDB (auto-created on ingestion)
 │
 ├── src/
 │   ├── config.py             ← Centralised settings from env vars
-│   ├── document_loader.py    ← PDF / TXT / MD loaders with metadata
+│   ├── document_loader.py    ← PDF/TXT/MD loaders with Kanda/Canto metadata
 │   ├── text_splitter.py      ← Overlapping chunk splitter
 │   ├── embeddings.py         ← Sentence-Transformer wrapper
 │   ├── vector_store.py       ← ChromaDB CRUD
 │   ├── retriever.py          ← Dense retrieval + deduplication
 │   ├── query_rewriter.py     ← Follow-up question rewriting
-│   ├── prompt_templates.py   ← Grounded system/user prompts
+│   ├── prompt_templates.py   ← Grounded system/user prompts (Valmiki-aware)
 │   ├── generation.py         ← Groq + Ollama clients (streaming)
 │   ├── rag_pipeline.py       ← End-to-end orchestration
 │   ├── citations.py          ← Citation extraction & validation
 │   ├── evaluation.py         ← Recall@k, Precision@k, MRR metrics
-│   └── utils.py              ← Text cleaning, hashing, token counting
+│   └── utils.py              ← Text cleaning, hashing, token counting, labels
 │
 ├── scripts/
 │   ├── ingest_documents.py   ← CLI ingestion pipeline
@@ -113,6 +139,7 @@ ramayana-rag-chatbot/
 - **Windows 10/11** (PowerShell)
 - **Groq API key** (free at [console.groq.com](https://console.groq.com)) — required for answer generation only
 - **Internet connection** — for the first embedding model download (~130 MB)
+- **Valmiki Ramayana PDF** — place in `data/documents/` (not included in repo due to file size; see note below)
 
 ---
 
@@ -153,6 +180,56 @@ GROQ_API_KEY=gsk_your_key_here
 
 ---
 
+## Adding the Valmiki Ramayana PDF
+
+The PDF is **not included in the repository** (excluded via `.gitignore` — too large for git). To use the full knowledge base:
+
+1. Place your copy of the Valmiki Ramayana PDF in `data/documents/`.
+2. The recommended edition is the **Gita Press, Gorakhpur** English translation.
+3. Run the ingestion script:
+
+```powershell
+python scripts/ingest_documents.py --rebuild
+```
+
+> The `.gitignore` rule `data/documents/*.pdf` ensures the book is never accidentally committed to the repository.
+
+---
+
+## Ingesting Documents
+
+### First-time / full rebuild (recommended after adding the PDF)
+```powershell
+python scripts/ingest_documents.py --rebuild
+```
+
+### Incremental ingestion (skips unchanged files)
+```powershell
+python scripts/ingest_documents.py
+```
+
+### Check index status
+```powershell
+python -c "from src.config import settings; from src.vector_store import VectorStore; vs = VectorStore(settings.vectorstore_dir, settings.chroma_collection_name); print(f'Indexed chunks: {vs.count()}')"
+```
+
+> **What happens during ingestion:**
+> - Kanda (book) and Canto are detected automatically from PDF page headers
+> - Devanagari-only (Sanskrit) pages are skipped; only the English translation is indexed
+> - Pages and chunks are deduplicated by content hash
+
+---
+
+## Launching the Chatbot
+
+```powershell
+streamlit run app.py
+```
+
+The application opens in your browser at `http://localhost:8501`.
+
+---
+
 ## Configuring Groq
 
 1. Create a free API key at [console.groq.com](https://console.groq.com).
@@ -170,45 +247,6 @@ GROQ_API_KEY=gsk_your_key_here
    LLM_PROVIDER=ollama
    OLLAMA_MODEL=llama3
    ```
-
----
-
-## Adding Ramayana Documents
-
-A demo dataset is included (`data/documents/demo_ramayana.txt`). For comprehensive coverage, add full Kanda texts:
-
-1. Download public-domain editions (see `data/README.md` for sources).
-2. Place `.pdf`, `.txt`, or `.md` files in `data/documents/`.
-3. Run ingestion (see next section).
-
----
-
-## Ingesting Documents
-
-### Incremental ingestion (skips unchanged files)
-```powershell
-python scripts/ingest_documents.py
-```
-
-### Full rebuild
-```powershell
-python scripts/ingest_documents.py --rebuild
-```
-
-### Check index status
-```powershell
-python -c "from src.config import settings; from src.vector_store import VectorStore; vs = VectorStore(settings.vectorstore_dir, settings.chroma_collection_name); print(f'Indexed chunks: {vs.count()}')"
-```
-
----
-
-## Launching the Chatbot
-
-```powershell
-streamlit run app.py
-```
-
-The application opens in your browser at `http://localhost:8501`.
 
 ---
 
@@ -252,6 +290,7 @@ This reports:
 | `chromadb` version conflict | Run `pip install chromadb --upgrade` |
 | `Execution policy` error | `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser` |
 | App crashes on startup | Activate venv first: `.\venv\Scripts\Activate.ps1` |
+| PDF not found during ingestion | Place the Valmiki Ramayana PDF in `data/documents/` |
 
 ---
 
@@ -260,19 +299,29 @@ This reports:
 - All document embeddings are stored locally in `vectorstore/chroma/`.
 - No document text is sent externally except as part of the LLM context window sent to Groq.
 - API keys are read from environment variables and never exposed in the UI.
+- The Valmiki Ramayana PDF is excluded from git (`.gitignore`) and is never uploaded to the repository.
+
+---
 
 ## Source Attribution
 
-The demo dataset (`demo_ramayana.txt`) is drawn from:
-- Griffith, Ralph T.H. (translator). *The Ramayana of Valmiki*. Benares: E.J. Lazarus and Co., 1870–1874.
-- This translation is in the public domain.
+The knowledge base uses:
+- **Valmiki Ramayana** — English translation published by **Gita Press, Gorakhpur, India**.  
+  Covers all 7 Kandas of the original Sanskrit epic composed by the sage Valmiki.
+
+The demo fallback dataset (`demo_ramayana.txt`) is drawn from:
+- Griffith, Ralph T.H. (translator). *The Ramayana of Valmiki*. Benares: E.J. Lazarus and Co., 1870–1874. (Public domain)
+
+---
 
 ## Known Limitations
 
-- The demo dataset covers key episodes but not the complete epic; add full Kanda texts for comprehensive coverage.
 - Answer quality depends on the quality and coverage of indexed documents.
 - Follow-up query rewriting uses an LLM call — when the API is unavailable, heuristic rewriting is used.
 - Generation requires a Groq API key or a running Ollama instance.
+- Sanskrit verse numbers and diacritical marks in the Gita Press PDF may not always be extracted cleanly by pypdf.
+
+---
 
 ## Future Improvements
 

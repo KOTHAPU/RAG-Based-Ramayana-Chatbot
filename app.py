@@ -629,8 +629,9 @@ def render_sidebar() -> None:
             """
             <div style="font-family:'Inter',sans-serif; font-size:0.75rem; color:rgba(255,248,238,0.55); line-height:1.6;">
             <strong style="color:rgba(255,248,238,0.8);">ℹ About Answers</strong><br>
-            Answers are grounded in indexed Ramayana texts. Multiple traditions of the Ramayana exist;
-            answers may reflect the available indexed edition(s).
+            Answers are grounded in the complete <em>Valmiki Ramayana</em> (Gita Press, Gorakhpur — English translation),
+            covering all seven Kandas: Balakanda, Ayodhyakanda, Aranyakanda, Kishkindhakanda,
+            Sundarakanda, Yuddhakanda, and Uttarakanda.
             </div>
             """,
             unsafe_allow_html=True,
@@ -681,14 +682,18 @@ def render_header() -> None:
 # ── Example questions ─────────────────────────────────────────────────────────
 
 EXAMPLE_QUESTIONS = [
-    "Who is Hanuman and what makes him special?",
-    "Why was Rama exiled from Ayodhya?",
-    "How did Hanuman find Sita in Lanka?",
+    "Who is Hanuman and what makes him extraordinary?",
+    "Why was Rama exiled from Ayodhya for 14 years?",
+    "How did Hanuman find Sita in Lanka? (Sundarakanda)",
     "Who is Ravana and why did he abduct Sita?",
-    "What is the significance of the bridge to Lanka?",
+    "What is the significance of the bridge (Rama Setu) to Lanka?",
     "Describe the relationship between Rama and Lakshmana.",
-    "Who is Vibhishana and what role did he play?",
-    "What is the Agni Pariksha and why did it happen?",
+    "Who is Vibhishana and what role did he play in the war?",
+    "What is the Agni Pariksha and why did Sita undergo it?",
+    "How did Rama kill Ravana in the Yuddhakanda?",
+    "What boon did Kaikeyi demand from King Dasharatha?",
+    "Describe the Kishkindhakanda — Rama's alliance with Sugriva.",
+    "Who are the Vanaras and what was their role in Lanka war?",
 ]
 
 

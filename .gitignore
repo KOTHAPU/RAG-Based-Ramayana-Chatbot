@@ -28,16 +28,24 @@ env/
 # Uncomment the next line to also ignore the vectorstore (it can be rebuilt)
 # vectorstore/chroma/
 
-# Large source documents (users supply these themselves)
+# Large source documents — users supply these themselves (not committed to repo)
 data/documents/*.pdf
 data/documents/*.epub
+data/documents/valmiki-ramayana-gita-press-english.pdf
 
 # ── Logs & Temp ───────────────────────────────────────────────────────────────
 *.log
 *.tmp
 .DS_Store
 Thumbs.db
+ingestion_log.txt
+pdf_sample.txt
+pdf_sample2.txt
 
 # ── HuggingFace Cache ─────────────────────────────────────────────────────────
 .cache/
 test_chroma/
+
+# ── Misc generated files ──────────────────────────────────────────────────────
+Ramayana_RAG_Interview_Preparation_Guide.pdf
+
